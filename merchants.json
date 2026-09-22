@@ -1,0 +1,34 @@
+[
+  {
+    "id":"m001","name":"Rahul Mehta","business":"UrbanTech Retail","email":"rahul@urbantech.example","location":"Bengaluru","joined":"2025-02-11",
+    "returns":142,"recoveredValue":1284000,"co2Avoided":3120,"ewasteAvoided":58.4,"riskLevel":"LOW",
+    "riskSignals":{"returnFrequency":"Normal","photoMatch":"Verified","productHistory":"Consistent"},
+    "sustainabilityScore":88,
+    "returnHistory":[
+      {"date":"2026-09-08","product":"Aria Ultrabook 14","route":"Refurbish","valueRecovered":32000,"co2Avoided":48},
+      {"date":"2026-09-05","product":"Halo Smartphone 11","route":"Exchange","valueRecovered":8200,"co2Avoided":14.6},
+      {"date":"2026-08-27","product":"Plane Tablet 10","route":"Resell","valueRecovered":12500,"co2Avoided":26.4},
+      {"date":"2026-08-14","product":"Loop Smartwatch","route":"Refurbish","valueRecovered":3400,"co2Avoided":5.1}
+    ]
+  },
+  {
+    "id":"m002","name":"Sana Iyer","business":"NextGen Gadgets","email":"sana@nextgen.example","location":"Pune","joined":"2025-06-03",
+    "returns":76,"recoveredValue":512000,"co2Avoided":1440,"ewasteAvoided":22.1,"riskLevel":"MEDIUM",
+    "riskSignals":{"returnFrequency":"Elevated","photoMatch":"Verified","productHistory":"Mostly consistent"},
+    "sustainabilityScore":71,
+    "returnHistory":[
+      {"date":"2026-09-06","product":"Halo Smartphone 12","route":"Recycle","valueRecovered":0,"co2Avoided":11.2},
+      {"date":"2026-08-30","product":"Aria Ultrabook 14","route":"Resell","valueRecovered":41000,"co2Avoided":62}
+    ]
+  },
+  {
+    "id":"m003","name":"Deepak Nair","business":"CircuitBazaar","email":"deepak@circuitbazaar.example","location":"Delhi","joined":"2024-11-20",
+    "returns":211,"recoveredValue":298000,"co2Avoided":610,"ewasteAvoided":9.8,"riskLevel":"HIGH",
+    "riskSignals":{"returnFrequency":"Unusually high","photoMatch":"Mismatch detected","productHistory":"Repeated damage claims"},
+    "sustainabilityScore":42,
+    "returnHistory":[
+      {"date":"2026-09-07","product":"Echo ANC Headphones","route":"Write Off","valueRecovered":0,"co2Avoided":0.6},
+      {"date":"2026-09-02","product":"Halo Smartphone 12","route":"Recycle","valueRecovered":0,"co2Avoided":11.2}
+    ]
+  }
+]

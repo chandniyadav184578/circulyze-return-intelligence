@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circulyze — Intelligent Returns Disposition</title>
+<meta name="description" content="Circulyze helps retailers decide the highest-value, lowest-waste next destination for a returned electronic product.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= SPLASH ================= -->
+<div id="splash">
+  <img class="splash-mark" src="assets/brand/circulize-logo.png" alt="Circulyze logo">
+  <div class="splash-word">CIRCULYZE</div>
+  <div class="splash-tag">The return that is worth more than the sale.</div>
+  <button class="splash-skip" id="splash-skip">Enter site</button>
+</div>
+
+<div id="toast-root"></div>
+
+<!-- ================= NAV ================= -->
+<header class="topnav">
+  <div class="wrap nav-row">
+    <div class="brand" id="nav-brand"><img class="brand-logo" src="assets/brand/circulize-logo.png" alt="Circulyze logo"> Circulyze</div>
+    <nav class="links">
+      <button data-nav="home">Home</button>
+      <button data-nav="how-it-works">How It Works</button>
+      <button data-nav="decision-engine-info">Decision Engine</button>
+      <button data-nav="sustainability-info">Sustainability</button>
+      <button data-nav="about">About</button>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn btn-ghost btn-sm" data-nav="login">Login / Profile</button>
+      <button class="btn btn-ghost btn-sm" data-nav="merchant-dashboard">Merchant Dashboard</button>
+      <button class="btn btn-primary btn-sm" data-nav="company-dashboard">Company Dashboard</button>
+      <div class="profile-nav" id="profile-nav"></div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" data-icon="menu"></button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= MARKETING / LANDING ================= -->
+<div id="marketing-root">
+
+  <section class="hero carousel" id="home" aria-roledescription="carousel" aria-label="Circulyze product story">
+    <div class="wrap carousel-shell" id="carousel-shell">
+      <div class="carousel-track" id="carousel-track">
+
+        <!-- SLIDE 1 — HOME -->
+        <div class="c-slide active" data-label="Home">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow">AI-assisted prototype recommendation</span>
+              <h1>Every return has a next best destination.</h1>
+              <p class="lead">Circulyze helps retailers decide what should happen to every returned product — balancing recovered value with lower waste.</p>
+              <div class="hero-actions">
+                <button class="btn btn-primary" id="hero-assess-btn">Assess a Return →</button>
+                <button class="btn btn-ghost" id="hero-explore-btn">Explore Circulyze</button>
+              </div>
+              <div class="hero-stats" id="hero-stats"></div>
+            </div>
+            <div class="loop-visual">
+              <svg viewBox="0 0 320 320" fill="none">
+                <circle cx="160" cy="160" r="120" stroke="var(--line-strong)" stroke-width="1.5"/>
+                <circle cx="160" cy="160" r="86" stroke="var(--line)" stroke-width="1.5"/>
+                <g stroke="var(--moss-bright)" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M160 40a120 120 0 0 1 84 34" />
+                  <path d="M264 220a120 120 0 0 1-104 60" />
+                  <path d="M78 246A120 120 0 0 1 62 110" />
+                </g>
+                <circle cx="160" cy="40" r="7" fill="var(--moss-bright)"/>
+                <circle cx="264" cy="220" r="7" fill="var(--brass)"/>
+                <circle cx="78" cy="246" r="7" fill="var(--slate)"/>
+                <text x="160" y="150" text-anchor="middle" fill="var(--paper)" font-family="Space Grotesk" font-size="14">RETURN</text>
+                <text x="160" y="168" text-anchor="middle" fill="var(--moss-bright)" font-family="Space Grotesk" font-size="14">CIRCULYZE</text>
+                <text x="160" y="186" text-anchor="middle" fill="var(--paper-dim)" font-size="11">next best destination</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 — HOW IT WORKS -->
+        <div class="c-slide" data-label="How It Works">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow">How it works</span>
+              <h1>From return to next move.</h1>
+              <p class="lead">Every returned unit moves through the same short, confident sequence.</p>
+            </div>
+            <div class="flow-vert c-flow">
+              <div class="flow-step"><b>01 — Assess</b><br>Understand the returned product.</div>
+              <div class="flow-connector"></div>
+              <div class="flow-step"><b>02 — Analyze</b><br>Evaluate relevant signals.</div>
+              <div class="flow-connector"></div>
+              <div class="flow-step"><b>03 — Decide</b><br>Recommend the next best destination.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 — DECISION ENGINE -->
+        <div class="c-slide" data-label="Decision Engine">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow">Decision engine</span>
+              <h1>One return. Multiple signals. One decision.</h1>
+              <p class="lead">The decision engine weighs five live factors before recommending a route.</p>
+            </div>
+            <div class="c-engine">
+              <div class="factor-grid c-factor-grid">
+                <div class="factor"><span data-icon="condition"></span><b>Condition</b></div>
+                <div class="factor"><span data-icon="category"></span><b>Category</b></div>
+                <div class="factor"><span data-icon="location"></span><b>Location</b></div>
+                <div class="factor"><span data-icon="season"></span><b>Season</b></div>
+                <div class="factor"><span data-icon="cost"></span><b>Recovery cost</b></div>
+              </div>
+              <div class="c-engine-arrow">↓</div>
+              <div class="c-engine-core">CIRCULYZE DECISION ENGINE</div>
+              <div class="c-engine-arrow">↓</div>
+              <div class="c-engine-result">Next best destination: <b>Resell</b></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 4 — SUSTAINABILITY -->
+        <div class="c-slide" data-label="Sustainability">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow">Sustainability</span>
+              <h1>Better decisions. Lower waste.</h1>
+              <p class="lead">Every route is weighed for environmental impact, not just recovered value.</p>
+              <div class="hero-stats" id="slide-sustain-stats"></div>
+            </div>
+            <div class="c-loop-strip">
+              <span>Better disposition</span><span class="flow-arrow">→</span>
+              <span>Longer product life</span><span class="flow-arrow">→</span>
+              <span class="highlight">Less waste</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 5 — VALUE RECOVERY -->
+        <div class="c-slide" data-label="Value Recovery">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow">Value recovery</span>
+              <h1>Don't write off value too early.</h1>
+              <p class="lead">A confident disposition decision recovers value a fixed rulebook leaves behind.</p>
+              <div class="hero-stats" id="slide-value-stats"></div>
+            </div>
+            <div class="c-loop-strip">
+              <span>Recovery potential</span><span class="flow-arrow">→</span>
+              <span>Resale &amp; refurbishment value</span><span class="flow-arrow">→</span>
+              <span class="highlight">Value recovered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 6 — IMPACT -->
+        <div class="c-slide" data-label="Impact">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow">Impact</span>
+              <h1>One decision. Two outcomes.</h1>
+              <p class="lead">Every recommendation is scored on value and environmental impact together.</p>
+            </div>
+            <div class="c-impact">
+              <div class="c-impact-side"><span data-icon="chart"></span><b>Value recovery</b></div>
+              <div class="c-impact-plus">+</div>
+              <div class="c-impact-side"><span data-icon="ewaste"></span><b>Waste reduction</b></div>
+              <div class="c-engine-arrow">↓</div>
+              <div class="c-engine-core">Better business + better outcomes</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 7 — CTA -->
+        <div class="c-slide" data-label="Get Started">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow">Get started</span>
+              <h1>Make the next return smarter.</h1>
+              <p class="lead">Turn return decisions into measurable value and impact.</p>
+              <div class="hero-actions">
+                <button class="btn btn-primary" id="cta-assess-btn">Assess a Return →</button>
+                <button class="btn btn-ghost" id="cta-dashboard-btn">Explore the Dashboard</button>
+              </div>
+            </div>
+            <div class="loop-visual">
+              <svg viewBox="0 0 320 320" fill="none">
+                <circle cx="160" cy="160" r="120" stroke="var(--line-strong)" stroke-width="1.5"/>
+                <circle cx="160" cy="160" r="86" stroke="var(--moss-bright)" stroke-width="1.5"/>
+                <text x="160" y="166" text-anchor="middle" fill="var(--paper)" font-family="Space Grotesk" font-size="15">Ready when</text>
+                <text x="160" y="186" text-anchor="middle" fill="var(--paper-dim)" font-size="11">you are</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="c-progress"><div class="c-progress-bar" id="c-progress-bar"></div></div>
+      <div class="carousel-controls">
+        <button class="c-arrow" id="c-prev" aria-label="Previous slide">‹</button>
+        <div class="c-indicators" id="c-indicators" role="tablist" aria-label="Slides"></div>
+        <button class="c-arrow" id="c-next" aria-label="Next slide">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- A. PROBLEM -->
+  <section id="problem">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The problem</span>
+        <h2>Fixed rules don't fit two very different returns.</h2>
+        <p>Most retailers still route electronics returns with static rules and spreadsheets. That works until it doesn't — a barely-used laptop and a cracked phone end up in the same bucket, and both value and materials leak out along the way.</p>
+      </div>
+      <div class="flow-row">
+        <span class="flow-chip">Fixed rules</span><span class="flow-arrow">→</span>
+        <span class="flow-chip bad">Inconsistent returns</span><span class="flow-arrow">→</span>
+        <span class="flow-chip bad">Lost value</span><span class="flow-arrow">→</span>
+        <span class="flow-chip bad">Unnecessary waste</span>
+      </div>
+      <p>Two returned products, same category, can need completely different decisions — one belongs on the resale shelf, the other belongs in a recycler's hands.</p>
+    </div>
+  </section>
+
+  <!-- B. SOLUTION -->
+  <section class="alt-bg" id="how-it-works">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The Circulyze solution</span>
+        <h2>One assessment, one confident route.</h2>
+      </div>
+      <div class="flow-vert">
+        <div class="flow-step">Return received</div><div class="flow-connector"></div>
+        <div class="flow-step">Product assessment</div><div class="flow-connector"></div>
+        <div class="flow-step">Decision engine</div><div class="flow-connector"></div>
+        <div class="flow-step">Best next destination</div><div class="flow-connector"></div>
+        <div class="flow-step">Value + sustainability tracking</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C. SIX ROUTES -->
+  <section id="routes-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Six possible routes</span>
+        <h2>Six possible destinations. One smarter decision.</h2>
+        <p>Circulyze evaluates each return and identifies the most appropriate next destination.</p>
+      </div>
+      <div class="route-source">
+        <div class="c-engine-core">CIRCULYZE DECISION ENGINE</div>
+        <div class="route-source-arrow">↓</div>
+        <span class="route-source-label">Six possible routes</span>
+      </div>
+      <div class="route-grid" id="route-grid"></div>
+    </div>
+  </section>
+
+  <!-- D. WHY DECISION CHANGES -->
+  <section class="alt-bg" id="decision-engine-info">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why the decision changes</span>
+        <h2>The best route depends on five live factors.</h2>
+        <p>The same product model can land on a different route tomorrow — that's the point.</p>
+      </div>
+      <div class="factor-grid">
+        <div class="factor"><span data-icon="condition"></span><b>Condition</b></div>
+        <div class="factor"><span data-icon="category"></span><b>Category</b></div>
+        <div class="factor"><span data-icon="location"></span><b>Location</b></div>
+        <div class="factor"><span data-icon="season"></span><b>Season</b></div>
+        <div class="factor"><span data-icon="cost"></span><b>Recovery cost</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E. FEATURES -->
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Built for the decision, not just the dashboard</span>
+        <h2>What powers every recommendation.</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card"><span data-icon="route"></span><h4>AI-assisted disposition recommendation</h4><p>Scores every route on value and impact together.</p></div>
+        <div class="feature-card"><span data-icon="price"></span><h4>Dynamic pricing</h4><p>Live comparison from original price to recommended resale.</p></div>
+        <div class="feature-card"><span data-icon="workflow"></span><h4>Channel routing</h4><p>Sends each unit toward the right resale or repair channel.</p></div>
+        <div class="feature-card"><span data-icon="refurbish"></span><h4>Resell & refurbish</h4><p>Unlocks value trapped by moderate, repairable damage.</p></div>
+        <div class="feature-card"><span data-icon="warranty"></span><h4>Fast warranty</h4><p>Simple coverage tracking for refurbished units.</p></div>
+        <div class="feature-card"><span data-icon="chart"></span><h4>Product-level sustainability score</h4><p>A score per return, not just a fleet-wide average.</p></div>
+        <div class="feature-card"><span data-icon="co2"></span><h4>CO₂ estimation</h4><p>Avoided-emissions estimate for every route choice.</p></div>
+        <div class="feature-card"><span data-icon="ewaste"></span><h4>E-waste estimation</h4><p>Tracks material diverted from landfill per unit.</p></div>
+        <div class="feature-card"><span data-icon="fraud"></span><h4>Fraud & abuse signals</h4><p>Flags unusual return patterns for review, not accusation.</p></div>
+        <div class="feature-card"><span data-icon="camera"></span><h4>Photo evidence</h4><p>Multi-angle capture at intake for condition proof.</p></div>
+        <div class="feature-card"><span data-icon="photo"></span><h4>Product-photo matching</h4><p>Checks uploaded photos against the reference listing.</p></div>
+        <div class="feature-card"><span data-icon="risk"></span><h4>Risk scoring</h4><p>A simple low/medium/high read per merchant.</p></div>
+        <div class="feature-card"><span data-icon="depreciation"></span><h4>Depreciation timeline</h4><p>Interactive value curve from today out to three years.</p></div>
+        <div class="feature-card"><span data-icon="parts"></span><h4>Parts & accessories exchange</h4><p>Matches compatible batteries, chargers and displays.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- F. ABOUT -->
+  <section class="alt-bg" id="about">
+    <div class="wrap about-split">
+      <div>
+        <span class="eyebrow">About Circulyze</span>
+        <h2>Climate-tech built for mid-sized e-commerce retailers.</h2>
+        <p>Circulyze focuses on one category first — electronics — because that's where returns are frequent, valuable, and easy to route wrong. The goal is economic sense for the retailer and less waste for everyone else.</p>
+      </div>
+      <div>
+        <p style="margin-bottom:10px;">Works with your existing returns stack:</p>
+        <div class="workflow-strip">
+          <span class="wf-node">E-commerce platform</span><span class="flow-arrow">→</span>
+          <span class="wf-node">Returns system</span><span class="flow-arrow">→</span>
+          <span class="wf-node">Circulyze</span><span class="flow-arrow">→</span>
+          <span class="wf-node">Disposition decision</span><span class="flow-arrow">→</span>
+          <span class="wf-node">Resale / repair / recycle channels</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="sustainability-info" style="padding-top:0"></section>
+
+  <footer>
+    <div class="wrap footer-cta">
+      <div>
+        <h3>Make the next return smarter.</h3>
+        <p>Turn every return into a better next move.</p>
+      </div>
+      <button class="btn btn-primary" id="footer-assess-btn">Assess a Return →</button>
+    </div>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <div class="brand"><img class="brand-logo" src="assets/brand/circulize-logo.png" alt="Circulyze logo"> Circulyze</div>
+        <p>Smarter return decisions.<br>Higher recovery. Lower waste.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul>
+          <li><button data-nav="how-it-works">How It Works</button></li>
+          <li><button data-nav="decision-engine-info">Decision Engine</button></li>
+          <li><button data-nav="sustainability-info">Sustainability</button></li>
+          <li><button data-nav="value-recovery">Value Recovery</button></li>
+          <li><button data-nav="impact">Impact</button></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Routes">
+        <h4>Routes</h4>
+        <ul>
+          <li><button data-nav="routes-section">Resell</button></li>
+          <li><button data-nav="routes-section">Refurbish</button></li>
+          <li><button data-nav="routes-section">Exchange</button></li>
+          <li><button data-nav="routes-section">Donate</button></li>
+          <li><button data-nav="routes-section">Recycle</button></li>
+          <li><button data-nav="routes-section">Write Off</button></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul>
+          <li><button data-nav="about">About</button></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap footer-legal">
+      <span>© 2026 Circulyze. All rights reserved.</span>
+      <span>The return that is worth more than the sale. — Prototype build.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ================= AUTH ================= -->
+<div id="auth-view" class="view">
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="brand" style="margin-bottom:20px;justify-content:center"><img class="brand-logo" src="assets/brand/circulize-logo.png" alt="Circulyze logo"> Circulyze</div>
+      <div class="role-toggle" id="role-toggle">
+        <button data-role="merchant" class="active">Merchant</button>
+        <button data-role="company">Company</button>
+      </div>
+      <form id="login-form">
+        <div class="field"><label>Email</label><input type="email" placeholder="you@business.com" value="rahul@urbantech.example"></div>
+        <div class="field"><label>Password</label><input type="password" placeholder="••••••••" value="demopassword"></div>
+        <div class="check-row"><input type="checkbox" checked id="remember"><label for="remember">Remember me</label></div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Login</button>
+      </form>
+      <div class="auth-foot"><a href="#">Forgot password</a><a href="#">Create account</a></div>
+      <p class="demo-note">Prototype login — authentication is simulated. Submitting signs you in with sample data for the selected role.</p>
+      <div style="text-align:center;margin-top:14px;">
+        <button class="btn btn-ghost btn-sm" id="back-to-landing">Back to site</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= APP SHELL ================= -->
+<div id="app-shell">
+  <div class="app-body">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main-panel">
+      <div class="view" id="screen-merchant-dashboard"><div id="merchant-dashboard-mount"></div></div>
+      <div class="view" id="screen-assess"><div id="assess-mount"></div></div>
+      <div class="view" id="screen-processing"><div id="processing-mount"></div></div>
+      <div class="view" id="screen-result"><div id="result-mount"></div></div>
+      <div class="view" id="screen-merchant-history"><div id="merchant-history-mount"></div></div>
+      <div class="view" id="screen-roi-tracking"><div id="roi-tracking-mount"></div></div>
+      <div class="view" id="screen-value-at-risk"><div id="value-at-risk-mount"></div></div>
+      <div class="view" id="screen-recovery-simulator"><div id="recovery-simulator-mount"></div></div>
+      <div class="view" id="screen-circulyze-score"><div id="circulyze-score-mount"></div></div>
+      <div class="view" id="screen-intelligence-hub"><div id="intelligence-hub-mount"></div></div>
+      <div class="view" id="screen-profile"><div id="profile-mount"></div></div>
+      <div class="view" id="screen-settings"><div id="settings-mount"></div></div>
+      <div class="view" id="screen-parts"><div id="parts-mount"></div></div>
+      <div class="view" id="screen-company-dashboard"><div id="company-dashboard-mount"></div></div>
+      <div class="view" id="screen-company-merchants"><div id="company-merchants-mount"></div></div>
+      <div class="view" id="screen-company-acquisition"><div id="company-acquisition-mount"></div></div>
+      <div class="view" id="screen-company-analytics"><div id="company-analytics-mount"></div></div>
+      <div class="view" id="screen-company-impact"><div id="company-impact-mount"></div></div>
+      <div class="view" id="screen-company-risk"><div id="company-risk-mount"></div></div>
+      <div class="view" id="screen-company-merchant-detail"><div id="company-merchant-detail-mount"></div></div>
+      <div class="view" id="screen-marketplace"><div id="marketplace-mount"></div></div>
+    </main>
+  </div>
+</div>
+
+<script src="js/icons.js"></script>
+<script src="js/avatar.js"></script>
+<script src="js/decisionEngine.js"></script>
+<script src="js/pricing.js"></script>
+<script src="js/sustainability.js"></script>
+<script src="js/fraud.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/marketplace.js"></script>
+<script src="js/roi.js"></script>
+<script src="js/intelligence.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/carousel.js"></script>
+<script type="application/json" id="sr-data-products">
+[
+  {"id":"p001","name":"Aria Ultrabook 14","brand":"Nordic","model":"AU14-2023","category":"Laptop","originalPrice":62000,"currentValue":41000,"age":8,"condition":"Like New","location":"Bengaluru","season":"Festive","recoveryCost":900,"warranty":"Active","recommendedRoute":"resell","co2Avoided":62.0,"ewasteAvoided":1.9,"images":[]},
+  {"id":"p002","name":"Aria Ultrabook 14","brand":"Nordic","model":"AU14-2022","category":"Laptop","originalPrice":58000,"currentValue":32000,"age":15,"condition":"Fair","location":"Pune","season":"Regular","recoveryCost":3400,"warranty":"Expired","recommendedRoute":"refurbish","co2Avoided":48.0,"ewasteAvoided":1.7,"images":[]},
+  {"id":"p003","name":"Halo Smartphone 12","brand":"Halo","model":"H12-Pro","category":"Smartphone","originalPrice":24000,"currentValue":9000,"age":22,"condition":"Damaged","location":"Delhi","season":"Regular","recoveryCost":5200,"warranty":"Expired","recommendedRoute":"recycle","co2Avoided":11.2,"ewasteAvoided":0.18,"images":[]},
+  {"id":"p004","name":"Halo Smartphone 11","brand":"Halo","model":"H11","category":"Smartphone","originalPrice":19000,"currentValue":8200,"age":6,"condition":"Good","location":"Mumbai","season":"Festive","recoveryCost":600,"warranty":"Active","recommendedRoute":"exchange","co2Avoided":14.6,"ewasteAvoided":0.2,"images":[]},
+  {"id":"p005","name":"Plane Tablet 10","brand":"Plane","model":"PT10-2023","category":"Tablet","originalPrice":21000,"currentValue":12500,"age":10,"condition":"Good","location":"Hyderabad","season":"Regular","recoveryCost":700,"warranty":"Active","recommendedRoute":"resell","co2Avoided":26.4,"ewasteAvoided":0.6,"images":[]},
+  {"id":"p006","name":"Loop Smartwatch","brand":"Loop","model":"LSW-2","category":"Smartwatch","originalPrice":9500,"currentValue":3800,"age":18,"condition":"Fair","location":"Chennai","season":"Regular","recoveryCost":450,"warranty":"Expired","recommendedRoute":"refurbish","co2Avoided":5.1,"ewasteAvoided":0.09,"images":[]},
+  {"id":"p007","name":"Echo ANC Headphones","brand":"Echo","model":"ANC-450","category":"Headphones","originalPrice":7200,"currentValue":2600,"age":26,"condition":"Non-functional","location":"Kolkata","season":"Regular","recoveryCost":1800,"warranty":"Expired","recommendedRoute":"writeOff","co2Avoided":0.6,"ewasteAvoided":0.05,"images":[]},
+  {"id":"p008","name":"Aria Ultrabook 14","brand":"Nordic","model":"AU14-2021","category":"Laptop","originalPrice":55000,"currentValue":21000,"age":30,"condition":"Damaged","location":"Bengaluru","season":"Regular","recoveryCost":6100,"warranty":"Expired","recommendedRoute":"recycle","co2Avoided":40.0,"ewasteAvoided":1.6,"images":[]}
+]
+
+</script>
+<script type="application/json" id="sr-data-merchants">
+[
+  {
+    "id":"m001","name":"Rahul Mehta","business":"UrbanTech Retail","email":"rahul@urbantech.example","location":"Bengaluru","joined":"2025-02-11",
+    "returns":142,"recoveredValue":1284000,"co2Avoided":3120,"ewasteAvoided":58.4,"riskLevel":"LOW",
+    "riskSignals":{"returnFrequency":"Normal","photoMatch":"Verified","productHistory":"Consistent"},
+    "sustainabilityScore":88,
+    "returnHistory":[
+      {"date":"2026-09-08","product":"Aria Ultrabook 14","route":"Refurbish","valueRecovered":32000,"co2Avoided":48},
+      {"date":"2026-09-05","product":"Halo Smartphone 11","route":"Exchange","valueRecovered":8200,"co2Avoided":14.6},
+      {"date":"2026-08-27","product":"Plane Tablet 10","route":"Resell","valueRecovered":12500,"co2Avoided":26.4},
+      {"date":"2026-08-14","product":"Loop Smartwatch","route":"Refurbish","valueRecovered":3400,"co2Avoided":5.1}
+    ]
+  },
+  {
+    "id":"m002","name":"Sana Iyer","business":"NextGen Gadgets","email":"sana@nextgen.example","location":"Pune","joined":"2025-06-03",
+    "returns":76,"recoveredValue":512000,"co2Avoided":1440,"ewasteAvoided":22.1,"riskLevel":"MEDIUM",
+    "riskSignals":{"returnFrequency":"Elevated","photoMatch":"Verified","productHistory":"Mostly consistent"},
+    "sustainabilityScore":71,
+    "returnHistory":[
+      {"date":"2026-09-06","product":"Halo Smartphone 12","route":"Recycle","valueRecovered":0,"co2Avoided":11.2},
+      {"date":"2026-08-30","product":"Aria Ultrabook 14","route":"Resell","valueRecovered":41000,"co2Avoided":62}
+    ]
+  },
+  {
+    "id":"m003","name":"Deepak Nair","business":"CircuitBazaar","email":"deepak@circuitbazaar.example","location":"Delhi","joined":"2024-11-20",
+    "returns":211,"recoveredValue":298000,"co2Avoided":610,"ewasteAvoided":9.8,"riskLevel":"HIGH",
+    "riskSignals":{"returnFrequency":"Unusually high","photoMatch":"Mismatch detected","productHistory":"Repeated damage claims"},
+    "sustainabilityScore":42,
+    "returnHistory":[
+      {"date":"2026-09-07","product":"Echo ANC Headphones","route":"Write Off","valueRecovered":0,"co2Avoided":0.6},
+      {"date":"2026-09-02","product":"Halo Smartphone 12","route":"Recycle","valueRecovered":0,"co2Avoided":11.2}
+    ]
+  }
+]
+
+</script>
+<script type="application/json" id="sr-data-company">
+{
+  "name":"Circulyze Technologies Pvt. Ltd.",
+  "email":"ops@circulyze.example",
+  "location":"Bengaluru",
+  "totals":{
+    "totalReturns":429,
+    "activeMerchants":3,
+    "productsProcessed":429,
+    "valueRecovered":2094000,
+    "co2Avoided":5170,
+    "ewasteAvoided":90.3,
+    "avgDecisionTimeSeconds":3.4,
+    "avgCashRecoveryHours":6.1
+  },
+  "channelRouting":{
+    "resell":38,
+    "refurbish":27,
+    "exchange":14,
+    "donate":6,
+    "recycle":11,
+    "writeOff":4
+  },
+  "acquisitionListings":[
+    {"id":"a001","product":"Aria Ultrabook 14","category":"Laptop","merchantId":"m002","location":"Pune","condition":"Fair","estPurchasePrice":18000,"repairCost":3400,"expectedResalePrice":28500,"expectedMargin":7100,"recommendedAction":"Buy & Refurbish"},
+    {"id":"a002","product":"Halo Smartphone 11","category":"Smartphone","merchantId":"m001","location":"Mumbai","condition":"Good","estPurchasePrice":6800,"repairCost":600,"expectedResalePrice":9800,"expectedMargin":2400,"recommendedAction":"Buy & Resell"},
+    {"id":"a003","product":"Plane Tablet 10","category":"Tablet","merchantId":"m003","location":"Hyderabad","condition":"Good","estPurchasePrice":9800,"repairCost":700,"expectedResalePrice":13600,"expectedMargin":3100,"recommendedAction":"Buy & Resell"},
+    {"id":"a004","product":"Loop Smartwatch","category":"Smartwatch","merchantId":"m002","location":"Chennai","condition":"Fair","estPurchasePrice":2600,"repairCost":450,"expectedResalePrice":4200,"expectedMargin":1150,"recommendedAction":"Buy & Refurbish"},
+    {"id":"a005","product":"Aria Ultrabook 14","category":"Laptop","merchantId":"m001","location":"Bengaluru","condition":"Like New","estPurchasePrice":38000,"repairCost":900,"expectedResalePrice":46000,"expectedMargin":7100,"recommendedAction":"Buy & Resell"},
+    {"id":"a006","product":"Halo Smartphone 12","category":"Smartphone","merchantId":"m003","location":"Delhi","condition":"Damaged","estPurchasePrice":5000,"repairCost":5200,"expectedResalePrice":9500,"expectedMargin":-700,"recommendedAction":"Pass"},
+    {"id":"a007","product":"Echo ANC Headphones","category":"Headphones","merchantId":"m003","location":"Kolkata","condition":"Non-functional","estPurchasePrice":1200,"repairCost":1800,"expectedResalePrice":3200,"expectedMargin":200,"recommendedAction":"Pass"}
+  ],
+  "monthlyTrend":[
+    {"month":"Apr","returns":52,"co2Avoided":540},
+    {"month":"May","returns":61,"co2Avoided":610},
+    {"month":"Jun","returns":58,"co2Avoided":590},
+    {"month":"Jul","returns":74,"co2Avoided":780},
+    {"month":"Aug","returns":88,"co2Avoided":940},
+    {"month":"Sep","returns":96,"co2Avoided":1010}
+  ]
+}
+
+</script>
+<script type="application/json" id="sr-data-transactions">
+[
+  {"id":"t001","merchantId":"m001","productId":"p002","date":"2026-09-08","route":"refurbish","valueRecovered":32000,"recoveryCost":3400,"cashRecoveryHours":5.2,"co2Avoided":48,"ewasteAvoided":1.7,"photoMatch":96,"riskLevel":"LOW"},
+  {"id":"t002","merchantId":"m001","productId":"p004","date":"2026-09-05","route":"exchange","valueRecovered":8200,"recoveryCost":600,"cashRecoveryHours":2.1,"co2Avoided":14.6,"ewasteAvoided":0.2,"photoMatch":99,"riskLevel":"LOW"},
+  {"id":"t003","merchantId":"m002","productId":"p003","date":"2026-09-06","route":"recycle","valueRecovered":0,"recoveryCost":5200,"cashRecoveryHours":0,"co2Avoided":11.2,"ewasteAvoided":0.18,"photoMatch":91,"riskLevel":"MEDIUM"},
+  {"id":"t004","merchantId":"m003","productId":"p007","date":"2026-09-07","route":"writeOff","valueRecovered":0,"recoveryCost":1800,"cashRecoveryHours":0,"co2Avoided":0.6,"ewasteAvoided":0.05,"photoMatch":54,"riskLevel":"HIGH"},
+  {"id":"t005","merchantId":"m003","productId":"p003","date":"2026-09-02","route":"recycle","valueRecovered":0,"recoveryCost":5200,"cashRecoveryHours":0,"co2Avoided":11.2,"ewasteAvoided":0.18,"photoMatch":61,"riskLevel":"HIGH"},
+  {"id":"t006","merchantId":"m002","productId":"p001","date":"2026-08-30","route":"resell","valueRecovered":41000,"recoveryCost":900,"cashRecoveryHours":1.4,"co2Avoided":62,"ewasteAvoided":1.9,"photoMatch":98,"riskLevel":"MEDIUM"}
+]
+
+</script>
+<script type="application/json" id="sr-data-routes">
+{
+  "routes":{
+    "resell":{"label":"Resell","icon":"resell","summary":"Sell the product as-is through the resale channel when condition and demand are high.","valueImpact":"Highest recovered value","sustainabilityImpact":"Full product reuse, no material processing"},
+    "refurbish":{"label":"Refurbish","icon":"refurbish","summary":"Repair and recondition the product before resale to unlock value trapped by moderate damage.","valueImpact":"High recovered value after repair cost","sustainabilityImpact":"Extends product lifespan, reduces new manufacturing"},
+    "exchange":{"label":"Exchange","icon":"exchange","summary":"Offer the unit as a replacement or trade-in for another return, avoiding a full repair cycle.","valueImpact":"Moderate recovered value, fast turnaround","sustainabilityImpact":"Keeps components in circulation"},
+    "donate":{"label":"Donate","icon":"donate","summary":"Route functional but low-resale-value units to donation partners.","valueImpact":"Low direct value, tax/CSR benefit","sustainabilityImpact":"Extends use phase, social impact"},
+    "recycle":{"label":"Recycle","icon":"recycle","summary":"Recover raw materials from products that are damaged beyond economical repair.","valueImpact":"Low recovered value","sustainabilityImpact":"Material recovery, prevents landfill e-waste"},
+    "writeOff":{"label":"Write Off","icon":"writeoff","summary":"Retire the unit when no route recovers meaningful value or material.","valueImpact":"No recovered value","sustainabilityImpact":"Minimal, last-resort outcome"}
+  },
+  "depreciationCurve":[
+    {"label":"Today","factor":1.0},
+    {"label":"6 months","factor":0.917},
+    {"label":"1 year","factor":0.833},
+    {"label":"2 years","factor":0.667},
+    {"label":"3 years","factor":0.528}
+  ],
+  "warrantySamples":[
+    {"productId":"p002","status":"Active","durationMonths":6,"startDate":"2026-09-09","expiryDate":"2027-03-09","claimStatus":"None filed"},
+    {"productId":"p006","status":"Active","durationMonths":3,"startDate":"2026-08-14","expiryDate":"2026-11-14","claimStatus":"None filed"}
+  ],
+  "partsAccessories":[
+    {"id":"pa01","name":"Laptop battery (Nordic Aria 14)","available":6,"requested":2,"compatibleProducts":["Aria Ultrabook 14"]},
+    {"id":"pa02","name":"Laptop charger 65W","available":11,"requested":4,"compatibleProducts":["Aria Ultrabook 14","Plane Tablet 10"]},
+    {"id":"pa03","name":"Phone display (Halo 11/12)","available":3,"requested":5,"compatibleProducts":["Halo Smartphone 11","Halo Smartphone 12"]},
+    {"id":"pa04","name":"Phone battery (Halo series)","available":9,"requested":2,"compatibleProducts":["Halo Smartphone 11","Halo Smartphone 12"]},
+    {"id":"pa05","name":"Smartwatch strap + charger","available":14,"requested":1,"compatibleProducts":["Loop Smartwatch"]},
+    {"id":"pa06","name":"Original retail box (assorted)","available":22,"requested":6,"compatibleProducts":["Aria Ultrabook 14","Halo Smartphone 11"]}
+  ]
+}
+
+</script>
+<script type="application/json" id="sr-data-settings">
+{
+  "themeOptions":["light","dark","system"],
+  "defaultTheme":"dark",
+  "notificationDefaults":{"emailAlerts":true,"riskAlerts":true,"weeklyDigest":false},
+  "dataPreferences":{"shareAnonymizedBenchmark":true},
+  "currency":"INR",
+  "currencySymbol":"₹"
+}
+
+</script>
+<script src="js/app.js"></script>
+<script>
+  // Inject static icons marked with data-icon once icons.js is loaded.
+  document.querySelectorAll('[data-icon]').forEach(el => { el.innerHTML = (window.SR && SR.icons && SR.icons[el.dataset.icon]) || ''; });
+</script>
+</body>
+</html>

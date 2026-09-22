@@ -1,0 +1,29 @@
+{
+  "routes":{
+    "resell":{"label":"Resell","icon":"resell","summary":"Sell the product as-is through the resale channel when condition and demand are high.","valueImpact":"Highest recovered value","sustainabilityImpact":"Full product reuse, no material processing"},
+    "refurbish":{"label":"Refurbish","icon":"refurbish","summary":"Repair and recondition the product before resale to unlock value trapped by moderate damage.","valueImpact":"High recovered value after repair cost","sustainabilityImpact":"Extends product lifespan, reduces new manufacturing"},
+    "exchange":{"label":"Exchange","icon":"exchange","summary":"Offer the unit as a replacement or trade-in for another return, avoiding a full repair cycle.","valueImpact":"Moderate recovered value, fast turnaround","sustainabilityImpact":"Keeps components in circulation"},
+    "donate":{"label":"Donate","icon":"donate","summary":"Route functional but low-resale-value units to donation partners.","valueImpact":"Low direct value, tax/CSR benefit","sustainabilityImpact":"Extends use phase, social impact"},
+    "recycle":{"label":"Recycle","icon":"recycle","summary":"Recover raw materials from products that are damaged beyond economical repair.","valueImpact":"Low recovered value","sustainabilityImpact":"Material recovery, prevents landfill e-waste"},
+    "writeOff":{"label":"Write Off","icon":"writeoff","summary":"Retire the unit when no route recovers meaningful value or material.","valueImpact":"No recovered value","sustainabilityImpact":"Minimal, last-resort outcome"}
+  },
+  "depreciationCurve":[
+    {"label":"Today","factor":1.0},
+    {"label":"6 months","factor":0.917},
+    {"label":"1 year","factor":0.833},
+    {"label":"2 years","factor":0.667},
+    {"label":"3 years","factor":0.528}
+  ],
+  "warrantySamples":[
+    {"productId":"p002","status":"Active","durationMonths":6,"startDate":"2026-09-09","expiryDate":"2027-03-09","claimStatus":"None filed"},
+    {"productId":"p006","status":"Active","durationMonths":3,"startDate":"2026-08-14","expiryDate":"2026-11-14","claimStatus":"None filed"}
+  ],
+  "partsAccessories":[
+    {"id":"pa01","name":"Laptop battery (Nordic Aria 14)","available":6,"requested":2,"compatibleProducts":["Aria Ultrabook 14"]},
+    {"id":"pa02","name":"Laptop charger 65W","available":11,"requested":4,"compatibleProducts":["Aria Ultrabook 14","Plane Tablet 10"]},
+    {"id":"pa03","name":"Phone display (Halo 11/12)","available":3,"requested":5,"compatibleProducts":["Halo Smartphone 11","Halo Smartphone 12"]},
+    {"id":"pa04","name":"Phone battery (Halo series)","available":9,"requested":2,"compatibleProducts":["Halo Smartphone 11","Halo Smartphone 12"]},
+    {"id":"pa05","name":"Smartwatch strap + charger","available":14,"requested":1,"compatibleProducts":["Loop Smartwatch"]},
+    {"id":"pa06","name":"Original retail box (assorted)","available":22,"requested":6,"compatibleProducts":["Aria Ultrabook 14","Halo Smartphone 11"]}
+  ]
+}

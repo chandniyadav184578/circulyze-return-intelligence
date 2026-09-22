@@ -1,0 +1,8 @@
+[
+  {"id":"t001","merchantId":"m001","productId":"p002","date":"2026-09-08","route":"refurbish","valueRecovered":32000,"recoveryCost":3400,"cashRecoveryHours":5.2,"co2Avoided":48,"ewasteAvoided":1.7,"photoMatch":96,"riskLevel":"LOW"},
+  {"id":"t002","merchantId":"m001","productId":"p004","date":"2026-09-05","route":"exchange","valueRecovered":8200,"recoveryCost":600,"cashRecoveryHours":2.1,"co2Avoided":14.6,"ewasteAvoided":0.2,"photoMatch":99,"riskLevel":"LOW"},
+  {"id":"t003","merchantId":"m002","productId":"p003","date":"2026-09-06","route":"recycle","valueRecovered":0,"recoveryCost":5200,"cashRecoveryHours":0,"co2Avoided":11.2,"ewasteAvoided":0.18,"photoMatch":91,"riskLevel":"MEDIUM"},
+  {"id":"t004","merchantId":"m003","productId":"p007","date":"2026-09-07","route":"writeOff","valueRecovered":0,"recoveryCost":1800,"cashRecoveryHours":0,"co2Avoided":0.6,"ewasteAvoided":0.05,"photoMatch":54,"riskLevel":"HIGH"},
+  {"id":"t005","merchantId":"m003","productId":"p003","date":"2026-09-02","route":"recycle","valueRecovered":0,"recoveryCost":5200,"cashRecoveryHours":0,"co2Avoided":11.2,"ewasteAvoided":0.18,"photoMatch":61,"riskLevel":"HIGH"},
+  {"id":"t006","merchantId":"m002","productId":"p001","date":"2026-08-30","route":"resell","valueRecovered":41000,"recoveryCost":900,"cashRecoveryHours":1.4,"co2Avoided":62,"ewasteAvoided":1.9,"photoMatch":98,"riskLevel":"MEDIUM"}
+]

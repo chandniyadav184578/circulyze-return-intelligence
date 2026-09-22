@@ -1,0 +1,40 @@
+{
+  "name":"Circulyze Technologies Pvt. Ltd.",
+  "email":"ops@circulyze.example",
+  "location":"Bengaluru",
+  "totals":{
+    "totalReturns":429,
+    "activeMerchants":3,
+    "productsProcessed":429,
+    "valueRecovered":2094000,
+    "co2Avoided":5170,
+    "ewasteAvoided":90.3,
+    "avgDecisionTimeSeconds":3.4,
+    "avgCashRecoveryHours":6.1
+  },
+  "channelRouting":{
+    "resell":38,
+    "refurbish":27,
+    "exchange":14,
+    "donate":6,
+    "recycle":11,
+    "writeOff":4
+  },
+  "acquisitionListings":[
+    {"id":"a001","product":"Aria Ultrabook 14","category":"Laptop","merchantId":"m002","location":"Pune","condition":"Fair","estPurchasePrice":18000,"repairCost":3400,"expectedResalePrice":28500,"expectedMargin":7100,"recommendedAction":"Buy & Refurbish"},
+    {"id":"a002","product":"Halo Smartphone 11","category":"Smartphone","merchantId":"m001","location":"Mumbai","condition":"Good","estPurchasePrice":6800,"repairCost":600,"expectedResalePrice":9800,"expectedMargin":2400,"recommendedAction":"Buy & Resell"},
+    {"id":"a003","product":"Plane Tablet 10","category":"Tablet","merchantId":"m003","location":"Hyderabad","condition":"Good","estPurchasePrice":9800,"repairCost":700,"expectedResalePrice":13600,"expectedMargin":3100,"recommendedAction":"Buy & Resell"},
+    {"id":"a004","product":"Loop Smartwatch","category":"Smartwatch","merchantId":"m002","location":"Chennai","condition":"Fair","estPurchasePrice":2600,"repairCost":450,"expectedResalePrice":4200,"expectedMargin":1150,"recommendedAction":"Buy & Refurbish"},
+    {"id":"a005","product":"Aria Ultrabook 14","category":"Laptop","merchantId":"m001","location":"Bengaluru","condition":"Like New","estPurchasePrice":38000,"repairCost":900,"expectedResalePrice":46000,"expectedMargin":7100,"recommendedAction":"Buy & Resell"},
+    {"id":"a006","product":"Halo Smartphone 12","category":"Smartphone","merchantId":"m003","location":"Delhi","condition":"Damaged","estPurchasePrice":5000,"repairCost":5200,"expectedResalePrice":9500,"expectedMargin":-700,"recommendedAction":"Pass"},
+    {"id":"a007","product":"Echo ANC Headphones","category":"Headphones","merchantId":"m003","location":"Kolkata","condition":"Non-functional","estPurchasePrice":1200,"repairCost":1800,"expectedResalePrice":3200,"expectedMargin":200,"recommendedAction":"Pass"}
+  ],
+  "monthlyTrend":[
+    {"month":"Apr","returns":52,"co2Avoided":540},
+    {"month":"May","returns":61,"co2Avoided":610},
+    {"month":"Jun","returns":58,"co2Avoided":590},
+    {"month":"Jul","returns":74,"co2Avoided":780},
+    {"month":"Aug","returns":88,"co2Avoided":940},
+    {"month":"Sep","returns":96,"co2Avoided":1010}
+  ]
+}

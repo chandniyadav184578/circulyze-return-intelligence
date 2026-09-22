@@ -1,0 +1,8 @@
+{
+  "themeOptions":["light","dark","system"],
+  "defaultTheme":"dark",
+  "notificationDefaults":{"emailAlerts":true,"riskAlerts":true,"weeklyDigest":false},
+  "dataPreferences":{"shareAnonymizedBenchmark":true},
+  "currency":"INR",
+  "currencySymbol":"₹"
+}
